@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background:url("images/zhangjie.jpg") no-repeat;
+            background-size:cover;
+        }
+        ul{
+            width:200px;
+            height:200px;
+            /*background-color:red;*/
+            position:absolute;
+            bottom:200px;
+            left:50%;
+            margin-left:-100px;
+            transform-style:preserve-3d;
+            animation:zhuandong 6s linear 0s infinite normal;
+        }
+        ul li{
+            list-style:none;
+            width:200px;
+            height:200px;
+            background-color:black;
+            font-size:60px;
+            text-align:center;
+            line-height:200px;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        ul li img{
+            width:200px;
+            height:200px;
+            border: 5px solid skyblue;
+            box-sizing: border-box;
+        }
+        ul:hover {
+            animation-play-state: paused;
+        }
+        ul:hover li img{
+            opacity:0.5;
+        }
+        ul li:hover img{
+            opacity:1;
+        }
+        ul li:nth-child(1){
+            /*background:yellow;*/
+            transform:rotateY(60deg) translateZ(200px);
+        }
+        ul li:nth-child(2){
+            /*background:blue;*/
+            transform:rotateY(120deg) translateZ(200px);
+        }
+        ul li:nth-child(3){
+            /*background:red;*/
+            transform:rotateY(180deg) translateZ(200px);
+        }
+        ul li:nth-child(4){
+            /*background:green;*/
+            transform:rotateY(240deg) translateZ(200px);
+        }
+        ul li:nth-child(5){
+            /*background:black;*/
+            transform:rotateY(300deg) translateZ(200px);
+        }
+        ul li:nth-child(6){
+            /*background:gold;*/
+            transform:rotateY(360deg) translateZ(200px);
+        }
+        @keyframes zhuandong{
+            from{
+                transform: rotateX(-10deg) rotateY(0deg);
+            }
+            to{
+                transform:rotateX(-10deg) rotateY(360deg);
+            }
+        }
+        .xin{
+            width:65px;
+            height:59px;
+            position:absolute;
+            bottom:100px;
+            left:100px;
+            animation:bounce 5s linear 0s infinite normal;
+        }
+        @keyframes bounce{
+           0%{
+                bottom:100px;
+                left:100px;
+                opacity: 1;
+                transform:scale(2);
+            }
+            25%{
+               bottom:800px;
+                left:400px;
+                opacity:0.5;
+                transform:scale(2.5);
+            }
+            50%{
+                bottom:400px;
+                left:600px;
+                opacity:1;
+                transform:scale(3);
+            }
+        }
+        .wrap {
+            width:600px;
+            height:200px;
+            position:absolute;
+            left:50%;
+            margin-left:-300px;
+            margin-top:100px;
+            /*box-shadow:0 0 100px;*/
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="images/zhangjie4.jpg" alt=""></li>
+    <li><img src="images/zhangjie5.jpg" alt=""></li>
+    <li><img src="images/zhangjie.jpg" alt=""></li>
+    <li><img src="images/zhangjie7.jpg" alt=""></li>
+    <li><img src="images/zhangjie8.jpg" alt=""></li>
+    <li><img src="images/zhangjie9.jpg" alt=""></li>
+</ul>
+<div class="wrap">
+
+</div>
+<img src="images/xin.png" alt="" class="xin">
+<audio src="images/zhoujielun.mp3" autoplay="autoplay" loop="loop"></audio>
+</body>
+</html>
